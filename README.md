@@ -7,6 +7,7 @@ Helps creating email templates to use in Siwapp.
 - [Quick & Dirty](#quick--dirty)
   - [Start using the Framework:](#start-using-the-framework)
   - [Build Final Template](#build-final-template)
+- [Caveats](#caveats)
 
 <!-- /MarkdownTOC -->
 
@@ -34,3 +35,29 @@ $ foundation build
 ```
 
 This will generate the inlined template inside the `dist` directory.
+
+## Caveats
+
+To avoid conflicts when using the CSS inliner in a template that makes use of the ERB `<% %>` tags, we've modified the Gulpfile file so you can use `[% %]` instead and the framework will generate the proper tags after CSS inline process.
+
+This code:
+
+```
+[% @invoice.items.each do |item| %]
+  <tr>
+    <td>[%= item.description %]</td>
+    <td class="total">[%= display_money item.base_amount %]</td>
+  </tr>
+[% end %]
+```
+
+would be transformed into this:
+
+```
+<% @invoice.items.each do |item| %>
+  <tr>
+    <td><%= item.description %></td>
+    <td class="total"><%= display_money item.base_amount %></td>
+  </tr>
+<% end %>
+```
