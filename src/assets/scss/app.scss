@@ -1,0 +1,175 @@
+@import 'settings';
+@import 'foundation-emails';
+
+// General
+
+html,
+body,
+table.body,
+table.container {
+  background-color: white;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.2rem;
+  padding-bottom: $global-padding;
+}
+
+// Text
+
+.text-right {
+  text-align: right;
+}
+
+.text-muted {
+  color: $dark-gray;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+// Company Info
+
+.company {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  line-height: 1.25;
+
+  li {
+    padding-bottom: $global-padding/2;
+  }
+}
+
+// Customer Info
+
+.customer {
+  .company__name {
+    font-size: 1.2rem;
+  }
+}
+
+// Tables
+
+table {
+  &.table {
+    border-collapse: collapse;
+
+    thead th {
+      border-bottom: 1px solid #cbcbc0;
+      background-color: #e7e7e2;
+      font-weight: bold;
+    }
+
+    td, th {
+      text-align: left;
+      padding: .625rem;
+    }
+
+    .total {
+      text-align: right;
+      white-space: nowrap;
+      width: 10rem;
+    }
+  }
+
+  &.info {
+    td, th {
+      padding: .5rem;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2ef;
+    }
+  }
+
+  &.items {
+    width: 100%;
+    border: 1px solid #cbcbc0;
+
+    tr:nth-child(even) {
+      background-color: #f2f2ef;
+    }
+  }
+
+  &.totals {
+    th {
+      font-weight: bold;
+    }
+
+    td, th {
+      text-align: right;
+      padding-top: 0;
+    }
+
+    .grand-total {
+      td, th {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Notes
+
+.notes {
+  .notes__title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+.alert {
+  padding: $global-padding;
+
+  border: 1px solid;
+  border-radius: 4px;
+
+  h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    padding-bottom: .5rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  &.alert-error {
+    border-color: $alert-color;
+
+    h2, p, a {
+      color: $alert-color;
+    }
+  }
+
+  &.alert-success {
+    border-color: $medium-gray;
+
+    h2, p, a {
+      color: $dark-gray;
+    }
+  }
+}
+
+// Print
+
+.email {
+  padding: ($global-padding * 2) 0;
+  // page-break-after: always;
+}
