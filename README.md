@@ -1,5 +1,7 @@
 # siwapp-email-template
 
+Helps creating email templates to use in Siwapp.
+
 <!-- MarkdownTOC depth=0 -->
 
 - [Quick & Dirty](#quick--dirty)
@@ -7,8 +9,6 @@
   - [Build Final Template](#build-final-template)
 
 <!-- /MarkdownTOC -->
-
-Helps creating email templates to use in Siwapp.
 
 This repository uses [Foundation for Emails](http://github.com/zurb/foundation-emails), refer to it for comprehensive instructions.
 
