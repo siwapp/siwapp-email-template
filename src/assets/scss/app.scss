@@ -34,14 +34,14 @@ h1 {
 // Company Info
 
 .company {
-  list-style: none;
   padding: 0;
   margin: 0;
 
   line-height: 1.25;
 
-  li {
+  p {
     padding-bottom: $global-padding/2;
+    margin-bottom: 0;
   }
 }
 
