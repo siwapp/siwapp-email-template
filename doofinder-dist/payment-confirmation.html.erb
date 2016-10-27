@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="background-color: white">
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Invoice</title>
+  </head>
+  <body style="-moz-box-sizing: border-box; -ms-text-size-adjust: 100%; -webkit-box-sizing: border-box; -webkit-text-size-adjust: 100%; Margin: 0; background-color: white; box-sizing: border-box; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; min-width: 100%; padding: 0; text-align: left; width: 100% !important">
+    <style>@media only screen {
+  html {
+    min-height: 100%;
+    background: #f3f3f3;
+  }
+}
+
+@media only screen and (max-width: 19.42333cm) {
+  .small-float-center {
+    margin: 0 auto !important;
+    float: none !important;
+    text-align: center !important;
+  }
+
+  .small-text-center {
+    text-align: center !important;
+  }
+
+  .small-text-left {
+    text-align: left !important;
+  }
+
+  .small-text-right {
+    text-align: right !important;
+  }
+}
+
+@media only screen and (max-width: 19.42333cm) {
+  .hide-for-large {
+    display: block !important;
+    width: auto !important;
+    overflow: visible !important;
+    max-height: none !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+}
+
+@media only screen and (max-width: 19.42333cm) {
+  table.body table.container .hide-for-large,
+  table.body table.container .row.hide-for-large {
+    display: table !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 19.42333cm) {
+  table.body table.container .callout-inner.hide-for-large {
+    display: table-cell !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 19.42333cm) {
+  table.body table.container .show-for-large {
+    display: none !important;
+    width: 0;
+    mso-hide: all;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 19.42333cm) {
+  table.body img {
+    width: auto;
+    height: auto;
+  }
+
+  table.body center {
+    min-width: 0 !important;
+  }
+
+  table.body .container {
+    width: 95% !important;
+  }
+
+  table.body .columns,
+  table.body .column {
+    height: auto !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  table.body .columns .column,
+  table.body .columns .columns,
+  table.body .column .column,
+  table.body .column .columns {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  table.body .collapse .columns,
+  table.body .collapse .column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  td.small-1,
+  th.small-1 {
+    display: inline-block !important;
+    width: 8.33333% !important;
+  }
+
+  td.small-2,
+  th.small-2 {
+    display: inline-block !important;
+    width: 16.66667% !important;
+  }
+
+  td.small-3,
+  th.small-3 {
+    display: inline-block !important;
+    width: 25% !important;
+  }
+
+  td.small-4,
+  th.small-4 {
+    display: inline-block !important;
+    width: 33.33333% !important;
+  }
+
+  td.small-5,
+  th.small-5 {
+    display: inline-block !important;
+    width: 41.66667% !important;
+  }
+
+  td.small-6,
+  th.small-6 {
+    display: inline-block !important;
+    width: 50% !important;
+  }
+
+  td.small-7,
+  th.small-7 {
+    display: inline-block !important;
+    width: 58.33333% !important;
+  }
+
+  td.small-8,
+  th.small-8 {
+    display: inline-block !important;
+    width: 66.66667% !important;
+  }
+
+  td.small-9,
+  th.small-9 {
+    display: inline-block !important;
+    width: 75% !important;
+  }
+
+  td.small-10,
+  th.small-10 {
+    display: inline-block !important;
+    width: 83.33333% !important;
+  }
+
+  td.small-11,
+  th.small-11 {
+    display: inline-block !important;
+    width: 91.66667% !important;
+  }
+
+  td.small-12,
+  th.small-12 {
+    display: inline-block !important;
+    width: 100% !important;
+  }
+
+  .columns td.small-12,
+  .column td.small-12,
+  .columns th.small-12,
+  .column th.small-12 {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  table.body td.small-offset-1,
+  table.body th.small-offset-1 {
+    margin-left: 8.33333% !important;
+    Margin-left: 8.33333% !important;
+  }
+
+  table.body td.small-offset-2,
+  table.body th.small-offset-2 {
+    margin-left: 16.66667% !important;
+    Margin-left: 16.66667% !important;
+  }
+
+  table.body td.small-offset-3,
+  table.body th.small-offset-3 {
+    margin-left: 25% !important;
+    Margin-left: 25% !important;
+  }
+
+  table.body td.small-offset-4,
+  table.body th.small-offset-4 {
+    margin-left: 33.33333% !important;
+    Margin-left: 33.33333% !important;
+  }
+
+  table.body td.small-offset-5,
+  table.body th.small-offset-5 {
+    margin-left: 41.66667% !important;
+    Margin-left: 41.66667% !important;
+  }
+
+  table.body td.small-offset-6,
+  table.body th.small-offset-6 {
+    margin-left: 50% !important;
+    Margin-left: 50% !important;
+  }
+
+  table.body td.small-offset-7,
+  table.body th.small-offset-7 {
+    margin-left: 58.33333% !important;
+    Margin-left: 58.33333% !important;
+  }
+
+  table.body td.small-offset-8,
+  table.body th.small-offset-8 {
+    margin-left: 66.66667% !important;
+    Margin-left: 66.66667% !important;
+  }
+
+  table.body td.small-offset-9,
+  table.body th.small-offset-9 {
+    margin-left: 75% !important;
+    Margin-left: 75% !important;
+  }
+
+  table.body td.small-offset-10,
+  table.body th.small-offset-10 {
+    margin-left: 83.33333% !important;
+    Margin-left: 83.33333% !important;
+  }
+
+  table.body td.small-offset-11,
+  table.body th.small-offset-11 {
+    margin-left: 91.66667% !important;
+    Margin-left: 91.66667% !important;
+  }
+
+  table.body table.columns td.expander,
+  table.body table.columns th.expander {
+    display: none !important;
+  }
+
+  table.body .right-text-pad,
+  table.body .text-pad-right {
+    padding-left: 10px !important;
+  }
+
+  table.body .left-text-pad,
+  table.body .text-pad-left {
+    padding-right: 10px !important;
+  }
+
+  table.menu {
+    width: 100% !important;
+  }
+
+  table.menu td,
+  table.menu th {
+    width: auto !important;
+    display: inline-block !important;
+  }
+
+  table.menu.vertical td,
+  table.menu.vertical th,
+  table.menu.small-vertical td,
+  table.menu.small-vertical th {
+    display: block !important;
+  }
+
+  table.menu[align="center"] {
+    width: auto !important;
+  }
+
+  table.button.small-expand,
+  table.button.small-expanded {
+    width: 100% !important;
+  }
+
+  table.button.small-expand table,
+  table.button.small-expanded table {
+    width: 100%;
+  }
+
+  table.button.small-expand table a,
+  table.button.small-expanded table a {
+    text-align: center !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  table.button.small-expand center,
+  table.button.small-expanded center {
+    min-width: 0;
+  }
+}</style>
+    <table class="body" style="Margin: 0; background: #f3f3f3; background-color: white; border-collapse: collapse; border-spacing: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; height: 100%; line-height: 1.5; margin: 0; padding: 0; text-align: left; vertical-align: top; width: 100%">
+      <tr style="padding: 0; text-align: left; vertical-align: top">
+        <td class="center" align="center" valign="top" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word">
+          <center data-parsed="" style="min-width: 19cm; width: 100%">
+
+            <table align="center" class="container float-center" style="Margin: 0 auto; background: #fefefe; background-color: white; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top; width: 19cm"><tbody><tr style="padding: 0; text-align: left; vertical-align: top"><td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word">
+
+              <br>
+
+              <h2 style="Margin: 0; Margin-bottom: 10px; color: inherit; font-family: Helvetica, Arial, sans-serif; font-size: 30px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; word-wrap: normal">Payment Confirmation</h2>
+              <p style="Margin: 0; Margin-bottom: 10px; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 10px; padding: 0; text-align: left">This email confirms your recent payment of <%= display_money invoice.gross_amount %>. Here are the details of your payment:</p>
+
+              <!--div class="alert alert-error">
+                <h2>Payment Declined</h2>
+                <p>Your most recent payment of <%= display_money invoice.gross_amount %> was declined. <a href="https://app.doofinder.com/admin/account/">Please update your billing information</a>.</p>
+              </div-->
+
+              <br><br><br>
+
+              <div class="invoice">
+                <table class="row collapse" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%"><tbody><tr style="padding: 0; text-align: left; vertical-align: top">
+                  <th class="small-4 large-4 columns first" style="Margin: 0 auto; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0 auto; padding: 0; padding-bottom: 20px; padding-left: 0; padding-right: 0; text-align: left; width: 6.545cm"><table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%"><tr style="padding: 0; text-align: left; vertical-align: top"><th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left">
+                    <img alt="Doofinder" src="data:image/png;base64,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%3D%3D" style="-ms-interpolation-mode: bicubic; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: auto">
+
+                  </th></tr></table></th>
+                  <th class="small-4 large-4 columns" style="Margin: 0 auto; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0 auto; padding: 0; padding-bottom: 20px; padding-left: 0; padding-right: 0; text-align: left; width: 6.33333cm"><table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%"><tr style="padding: 0; text-align: left; vertical-align: top"><th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left"></th></tr></table></th>
+                  <th class="small-4 large-4 columns last" style="Margin: 0 auto; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0 auto; padding: 0; padding-bottom: 20px; padding-left: 0; padding-right: 0; text-align: left; width: 6.545cm"><table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%"><tr style="padding: 0; text-align: left; vertical-align: top"><th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left">
+                    <div class="company text-right" style="line-height: 1.25; margin: 0; padding: 0; text-align: right">
+                      <p class="text-bold" style="Margin: 0; Margin-bottom: 10px; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; padding-bottom: 8px; text-align: left">
+                        <%= settings.company_name %>
+                        <% if settings.company_vat_id %>
+                          <br><%= settings.company_vat_id %>
+                        <% end %>
+                      </p>
+                      <p style="Margin: 0; Margin-bottom: 10px; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; padding-bottom: 8px; text-align: left"><%= format_address settings.company_address %></p>
+                      <p style="Margin: 0; Margin-bottom: 10px; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; padding-bottom: 8px; text-align: left"><%= settings.company_email %><br><%= settings.company_url %></p>
+                    </div>
+                  </th></tr></table></th>
+                </tr></tbody></table>
+
+                <h1 style="Margin: 0; Margin-bottom: 10px; color: inherit; font-family: Helvetica, Arial, sans-serif; font-size: 1.2rem; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 10px; padding: 0; padding-bottom: 16px; text-align: left; text-transform: uppercase; word-wrap: normal">Invoice</h1>
+
+                <table class="row collapse" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%"><tbody><tr style="padding: 0; text-align: left; vertical-align: top">
+                  <th class="small-6 large-6 columns first" style="Margin: 0 auto; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0 auto; padding: 0; padding-bottom: 20px; padding-left: 0; padding-right: 0; text-align: left; width: 9.71167cm"><table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%"><tr style="padding: 0; text-align: left; vertical-align: top"><th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left">
+                    <p class="text-muted" style="Margin: 0; Margin-bottom: 10px; color: #6f7371; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 10px; padding: 0; text-align: left">Billed to:</p>
+                    <div class="company customer" style="line-height: 1.25; margin: 0; padding: 0">
+                      <% if invoice.name? %>
+                        <p class="company__name" style="Margin: 0; Margin-bottom: 10px; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 1.2rem; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; padding-bottom: 8px; text-align: left"><%= invoice.name %></p>
+                      <% end %>
+                      <% if invoice.identification? %>
+                        <p class="company__id" style="Margin: 0; Margin-bottom: 10px; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; padding-bottom: 8px; text-align: left"><%= invoice.identification %></p>
+                      <% end %>
+                      <% if invoice.invoicing_address? || invoice.contact_person? %>
+                        <p class="company__address" style="Margin: 0; Margin-bottom: 10px; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; padding-bottom: 8px; text-align: left">
+                          <% if invoice.contact_person? %>
+                            <%= invoice.contact_person %><br>
+                          <% end %>
+                          <% if invoice.invoicing_address? %>
+                            <%= format_address invoice.invoicing_address %>
+                          <% end %>
+                        </p>
+                      <% end %>
+                      <% if invoice.email? %>
+                        <p style="Margin: 0; Margin-bottom: 10px; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; padding-bottom: 8px; text-align: left"><%= invoice.email %></p>
+                      <% end %>
+                    </div>
+                  </th></tr></table></th>
+                  <th class="small-6 large-6 columns last" style="Margin: 0 auto; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0 auto; padding: 0; padding-bottom: 20px; padding-left: 0; padding-right: 0; text-align: left; width: 9.71167cm"><table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%"><tr style="padding: 0; text-align: left; vertical-align: top"><th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left">
+                    <table cellspacing="0" class="table info" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%">
+                      <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top">
+                          <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .5rem; text-align: left">Invoice Number:</th>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .5rem; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= invoice %></td>
+                        </tr>
+                        <tr style="background-color: #f2f2ef; padding: 0; text-align: left; vertical-align: top">
+                          <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .5rem; text-align: left">Billed:</th>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .5rem; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= invoice.issue_date %></td>
+                        </tr>
+                        <tr style="padding: 0; text-align: left; vertical-align: top">
+                          <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .5rem; text-align: left">Due on:</th>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .5rem; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= invoice.due_date %></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </th></tr></table></th>
+                </tr></tbody></table>
+
+                <br>
+
+                <table class="table items" cellspacing="0" style="border: 1px solid #cbcbc0; border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%">
+                  <thead>
+                    <tr style="padding: 0; text-align: left; vertical-align: top">
+                      <th style="Margin: 0; background-color: #e7e7e2; border-bottom: 1px solid #cbcbc0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; text-align: left">Description</th>
+                      <th class="total" style="Margin: 0; background-color: #e7e7e2; border-bottom: 1px solid #cbcbc0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; text-align: right; white-space: nowrap; width: 10rem">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @invoice.items.each do |item| %>
+                      <tr style="padding: 0; text-align: left; vertical-align: top">
+                        <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; text-align: left; vertical-align: top; word-wrap: break-word"><%= item.description %></td>
+                        <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money item.base_amount %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+
+                <br>
+
+                <table class="row collapse" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%"><tbody><tr style="padding: 0; text-align: left; vertical-align: top">
+                  <th class="small-6 large-6 columns first" style="Margin: 0 auto; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0 auto; padding: 0; padding-bottom: 20px; padding-left: 0; padding-right: 0; text-align: left; width: 9.71167cm"><table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%"><tr style="padding: 0; text-align: left; vertical-align: top"><th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left"></th></tr></table></th>
+                  <th class="small-6 large-6 columns last" style="Margin: 0 auto; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0 auto; padding: 0; padding-bottom: 20px; padding-left: 0; padding-right: 0; text-align: left; width: 9.71167cm"><table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%"><tr style="padding: 0; text-align: left; vertical-align: top"><th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; padding: 0; text-align: left">
+                    <table class="table totals" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%">
+                      <tbody>
+                        <% if invoice.discount_amount != 0 %>
+                          <tr style="padding: 0; text-align: left; vertical-align: top">
+                            <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right">Discount</th>
+                            <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money invoice.discount_amount %></td>
+                          </tr>
+                        <% end %>
+                        <tr style="padding: 0; text-align: left; vertical-align: top">
+                          <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right">Subtotal</th>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money invoice.net_amount %></td>
+                        </tr>
+                        <% invoice.taxes.each do |tax, value| %>
+                          <tr style="padding: 0; text-align: left; vertical-align: top">
+                            <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right"><%= tax %></th>
+                            <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money value %></td>
+                          </tr>
+                        <% end %>
+                        <tr class="grand-total" style="padding: 0; text-align: left; vertical-align: top">
+                          <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 1.5rem; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right">Total</th>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 1.5rem; font-weight: bold; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money invoice.gross_amount %></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </th></tr></table></th>
+                </tr></tbody></table>
+
+                <% if invoice.terms? %>
+                  <br>
+                  <div class="notes">
+                    <p class="notes__title" style="Margin: 0; Margin-bottom: 10px; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 1rem; font-weight: bold; line-height: 1.5; margin: 0; margin-bottom: 10px; padding: 0; text-align: left">Terms &amp; Conditions</p>
+                    <div class="notes__content">
+                      <%= invoice.terms %>
+                    </div>
+                  </div>
+                <% end %>
+
+              </div>
+            </td></tr></tbody></table>
+
+          </center>
+        </td>
+      </tr>
+    </table>
+    <!-- prevent Gmail on iOS font size manipulation -->
+   <div style="display:none; white-space:nowrap; font:15px courier; line-height:0"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+  </body>
+</html>
+

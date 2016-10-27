@@ -122,8 +122,8 @@ function inliner(css) {
     .pipe($.replace, /%\]/g, '%>')
     // END
     .pipe($.htmlmin, {
-      collapseWhitespace: true,
-      minifyCSS: true
+      collapseWhitespace: false,
+      minifyCSS: false
     });
 
   return pipe();
