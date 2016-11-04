@@ -19,10 +19,6 @@ h1 {
 
 // Text
 
-.text-right {
-  text-align: right;
-}
-
 .text-muted {
   color: $dark-gray;
 }
@@ -42,6 +38,12 @@ h1 {
   p {
     padding-bottom: $global-padding/2;
     margin-bottom: 0;
+  }
+}
+
+.company--right {
+  p {
+    text-align: right;
   }
 }
 
