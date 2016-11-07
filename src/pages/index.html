@@ -10,12 +10,12 @@ subject: Invoice
   {{!> error}}
 
   <div class="invoice">
-    <row class="collapse">
-      <columns small="4" large="4">
+    <row class="">
+      <columns small="6" large="4">
         {{> logo}}
       </columns>
-      <columns small="4" large="4"></columns>
-      <columns small="4" large="4">
+      <columns small="6" large="4"></columns>
+      <columns small="12" large="4">
         <div class="company company--right">
           <p class="text-bold">
             [%= settings.company_name %]
@@ -29,10 +29,14 @@ subject: Invoice
       </columns>
     </row>
 
-    <h1>Invoice</h1>
+    <row>
+      <columns small="12" large="12">
+        <h1>Invoice</h1>
+      </columns>
+    </row>
 
-    <row class="collapse">
-      <columns small="6" large="6">
+    <row class="">
+      <columns small="12" large="6">
         <p class="text-muted">Billed to:</p>
         <div class="company customer">
           [% if invoice.name? %]
@@ -56,7 +60,7 @@ subject: Invoice
           [% end %]
         </div>
       </columns>
-      <columns small="6" large="6">
+      <columns small="12" large="6">
         <table cellspacing="0" class="table info">
           <tbody>
             <tr>
@@ -78,28 +82,32 @@ subject: Invoice
 
     <br>
 
-    <table class="table items" cellspacing="0">
-      <thead>
-        <tr>
-          <th>Description</th>
-          <th class="total">Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        [% @invoice.items.each do |item| %]
-          <tr>
-            <td>[%= item.description %]</td>
-            <td class="total">[%= display_money item.base_amount %]</td>
-          </tr>
-        [% end %]
-      </tbody>
-    </table>
+    <row>
+      <columns small="12" large="12">
+        <table class="table items" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th class="total">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            [% @invoice.items.each do |item| %]
+              <tr>
+                <td>[%= item.description %]</td>
+                <td class="total">[%= display_money item.base_amount %]</td>
+              </tr>
+            [% end %]
+          </tbody>
+        </table>
+      </columns>
+    </row>
 
     <br>
 
-    <row class="collapse">
-      <columns small="6" large="6"></columns>
-      <columns small="6" large="6">
+    <row class="">
+      <columns small="12" large="6"></columns>
+      <columns small="12" large="6">
         <table class="table totals" cellspacing="0">
           <tbody>
             [% if invoice.discount_amount != 0 %]
@@ -129,12 +137,16 @@ subject: Invoice
 
     [% if invoice.terms? %]
       <br>
-      <div class="notes">
-        <p class="notes__title">Terms &amp; Conditions</p>
-        <div class="notes__content">
-          [%= invoice.terms %]
-        </div>
-      </div>
+      <row>
+        <columns small="12" large="12">
+          <div class="notes">
+            <p class="notes__title">Terms &amp; Conditions</p>
+            <div class="notes__content">
+              [%= invoice.terms %]
+            </div>
+          </div>
+        </columns>
+      </row>
     [% end %]
 
   </div>
