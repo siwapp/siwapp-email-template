@@ -323,7 +323,7 @@
 
               <div class="alert alert-error" style="border: 1px solid; border-color: #ec5840; border-radius: 4px; padding: 16px">
                 <h2 style="Margin: 0; Margin-bottom: 10px; color: #ec5840; font-family: Helvetica, Arial, sans-serif; font-size: 1.2rem; font-weight: bold; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; padding-bottom: .5rem; text-align: left; word-wrap: normal">Payment Declined</h2>
-                <p style="Margin: 0; Margin-bottom: 10px; color: #ec5840; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; text-align: left">Your most recent payment of <%= display_money invoice.gross_amount %> was declined. <a href="https://app.doofinder.com/admin/account/" style="Margin: 0; color: #ec5840; font-family: Helvetica, Arial, sans-serif; font-weight: bold; line-height: 1.5; margin: 0; padding: 0; text-align: left; text-decoration: underline">Please update your billing information</a>.</p>
+                <p style="Margin: 0; Margin-bottom: 10px; color: #ec5840; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.5; margin: 0; margin-bottom: 0; padding: 0; text-align: left">Your most recent payment of <span class="money" style="white-space: nowrap"><%= display_money invoice.gross_amount %></span> was declined. <a href="https://app.doofinder.com/admin/account/" style="Margin: 0; color: #ec5840; font-family: Helvetica, Arial, sans-serif; font-weight: bold; line-height: 1.5; margin: 0; padding: 0; text-align: left; text-decoration: underline">Please update your billing information</a>.</p>
               </div>
               <br><br><br>
 
@@ -386,15 +386,15 @@
                       <tbody>
                         <tr style="padding: 0; text-align: left; vertical-align: top">
                           <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .5rem; text-align: left">Invoice Number:</th>
-                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .5rem; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= invoice %></td>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .5rem; text-align: right; vertical-align: top; white-space: nowrap; word-wrap: break-word"><%= invoice %></td>
                         </tr>
                         <tr style="background-color: #f2f2ef; padding: 0; text-align: left; vertical-align: top">
                           <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .5rem; text-align: left">Billed:</th>
-                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .5rem; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= invoice.issue_date %></td>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .5rem; text-align: right; vertical-align: top; white-space: nowrap; word-wrap: break-word"><%= invoice.issue_date %></td>
                         </tr>
                         <tr style="padding: 0; text-align: left; vertical-align: top">
                           <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .5rem; text-align: left">Due on:</th>
-                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .5rem; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= invoice.due_date %></td>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .5rem; text-align: right; vertical-align: top; white-space: nowrap; word-wrap: break-word"><%= invoice.due_date %></td>
                         </tr>
                       </tbody>
                     </table>
@@ -408,15 +408,15 @@
                     <table class="table items" cellspacing="0" style="border: 1px solid #cbcbc0; border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%">
                       <thead>
                         <tr style="padding: 0; text-align: left; vertical-align: top">
-                          <th class="text-nowrap" style="Margin: 0; background-color: #e7e7e2; border-bottom: 1px solid #cbcbc0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; text-align: left; white-space: nowrap">Description</th>
-                          <th class="total" style="Margin: 0; background-color: #e7e7e2; border-bottom: 1px solid #cbcbc0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; text-align: right; white-space: nowrap; width: 10rem">Total</th>
+                          <th class="description" style="Margin: 0; background-color: #e7e7e2; border-bottom: 1px solid #cbcbc0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; text-align: left">Description</th>
+                          <th class="total" style="Margin: 0; background-color: #e7e7e2; border-bottom: 1px solid #cbcbc0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; text-align: right; white-space: nowrap">Total</th>
                         </tr>
                       </thead>
                       <tbody>
                         <% @invoice.items.each do |item| %>
                           <tr style="padding: 0; text-align: left; vertical-align: top">
                             <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; text-align: left; vertical-align: top; word-wrap: break-word"><%= item.description %></td>
-                            <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money item.base_amount %></td>
+                            <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; text-align: right; vertical-align: top; white-space: nowrap; word-wrap: break-word"><%= display_money item.base_amount %></td>
                           </tr>
                         <% end %>
                       </tbody>
@@ -435,22 +435,22 @@
                         <% if invoice.discount_amount != 0 %>
                           <tr style="padding: 0; text-align: left; vertical-align: top">
                             <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right">Discount</th>
-                            <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money invoice.discount_amount %></td>
+                            <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; word-wrap: break-word"><%= display_money invoice.discount_amount %></td>
                           </tr>
                         <% end %>
                         <tr style="padding: 0; text-align: left; vertical-align: top">
                           <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right">Subtotal</th>
-                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money invoice.net_amount %></td>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; word-wrap: break-word"><%= display_money invoice.net_amount %></td>
                         </tr>
                         <% invoice.taxes.each do |tax, value| %>
                           <tr style="padding: 0; text-align: left; vertical-align: top">
                             <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right"><%= tax %></th>
-                            <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money value %></td>
+                            <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; word-wrap: break-word"><%= display_money value %></td>
                           </tr>
                         <% end %>
                         <tr class="grand-total" style="padding: 0; text-align: left; vertical-align: top">
                           <th style="Margin: 0; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 1.5rem; font-weight: bold; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right">Total</th>
-                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 1.5rem; font-weight: bold; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; width: 10rem; word-wrap: break-word"><%= display_money invoice.gross_amount %></td>
+                          <td class="total" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #3d3f3e; font-family: Helvetica, Arial, sans-serif; font-size: 1.5rem; font-weight: bold; hyphens: auto; line-height: 1.5; margin: 0; padding: .625rem; padding-top: 0; text-align: right; vertical-align: top; white-space: nowrap; word-wrap: break-word"><%= display_money invoice.gross_amount %></td>
                         </tr>
                       </tbody>
                     </table>
@@ -483,3 +483,4 @@
    <div style="display:none; white-space:nowrap; font:15px courier; line-height:0"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
   </body>
 </html>
+
