@@ -1,8 +1,8 @@
 {
-  "name": "foundation-emails-template",
+  "name": "siwapp-email-template",
   "version": "1.0.0",
-  "description": "Basic template for a Foundation for Emails project.",
-  "repository": "zurb/foundation-emails-template",
+  "description": "Basic template for Siwapp Emails.",
+  "repository": "siwapp/siwapp-email-template",
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
@@ -10,7 +10,6 @@
     "zip": "gulp zip --production",
     "litmus": "gulp litmus --production"
   },
-  "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
   "dependencies": {
     "foundation-emails": "^2.2.1"
@@ -22,7 +21,7 @@
     "beepbeep": "^1.2.0",
     "browser-sync": "^2.11.0",
     "colors": "^1.1.2",
-    "gulp": "git+https://github.com/gulpjs/gulp.git#4.0",
+    "gulp": "^4.0.0",
     "gulp-awspublish": "^3.0.1",
     "gulp-cli": "^1.1.0",
     "gulp-html-src": "^1.0.0",
@@ -46,7 +45,8 @@
     "yargs": "^4.1.0"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   }
-
 }
