@@ -18,6 +18,9 @@ const $ = plugins();
 // Look for the --production flag
 const PRODUCTION = !!(yargs.argv.production);
 
+// Look for the --minify flag
+const MINIFY = !!(yargs.argv.minify);
+
 // Declar var so that both AWS and Litmus task can use it.
 var CONFIG;
 
@@ -84,7 +87,7 @@ function images() {
 // Inline CSS and minify HTML
 function inline() {
   return gulp.src('dist/**/*.html')
-    .pipe($.if(PRODUCTION, inliner('dist/css/app.css')))
+    .pipe($.if(PRODUCTION, inliner('dist/css/app.css', MINIFY)))
     .pipe(gulp.dest('dist'));
 }
 
@@ -105,7 +108,7 @@ function watch() {
 }
 
 // Inlines CSS into HTML, adds media query CSS into the <style> tag of the email, and compresses the HTML
-function inliner(css) {
+function inliner(css, minify) {
   var css = fs.readFileSync(css).toString();
   var mqCss = siphon(css);
 
@@ -123,7 +126,7 @@ function inliner(css) {
     // END
     .pipe($.htmlmin, {
       collapseWhitespace: false,
-      minifyCSS: false
+      minifyCSS: minify
     });
 
   return pipe();

@@ -7,6 +7,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp --production",
+    "build-min": "gulp --production --minify",
     "zip": "gulp zip --production",
     "litmus": "gulp litmus --production"
   },

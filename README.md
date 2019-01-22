@@ -36,6 +36,13 @@ $ cd /path/to/repo
 $ foundation build
 ```
 
+or
+
+```bash
+$ cd /path/to/repo
+$ npm run build
+```
+
 This will generate the inlined template inside the `dist` directory.
 
 ## Caveats
@@ -68,35 +75,8 @@ would be transformed into this:
 
 ### Minification
 
-To make code easier to understand we disabled minification by default. If you want to re-enable it you can do it in the `gulpfile.babel.js` file.
+To make code easier to understand we disabled minification by default. If you want to compile with CSS minification run:
 
-1. Open the Gulpfile in your editor and search: `function inliner(css)`
-2. For the `htmlmin` plugin set the `collapseWhitespace` and `minifyCSS` options as `true`.
-
-The function would be something like this:
-
-```javascript
-function inliner(css) {
-  var css = fs.readFileSync(css).toString();
-  var mqCss = siphon(css);
-
-  var pipe = lazypipe()
-    .pipe($.inlineCss, {
-      applyStyleTags: false,
-      removeStyleTags: false,
-      removeLinkTags: false
-    })
-    .pipe($.replace, '<!-- <style> -->', `<style>${mqCss}</style>`)
-    .pipe($.replace, '<link rel="stylesheet" type="text/css" href="css/app.css">', '')
-    // START Fix Ruby's ERB tags
-    .pipe($.replace, /\[%/g, '<%')
-    .pipe($.replace, /%\]/g, '%>')
-    // END
-    .pipe($.htmlmin, {
-      collapseWhitespace: false,
-      minifyCSS: false
-    });
-
-  return pipe();
-}
+```bash
+$ npm run build-min
 ```
